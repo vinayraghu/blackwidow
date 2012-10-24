@@ -43,7 +43,7 @@ get_header(); ?>
               <?php the_title();?>
             </h6>
           </a>
-          <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
+          <p class="meta"><?php echo bootstrapwp_posted_on();?><?php comments_popup_link( '0 Comments', '1 Comment', '% Comments', 'comments-link', 'Comments Disabled' ); ?></p>
       <!--Title and meta comes aside the featured image-->          
                    <?php the_excerpt();?>
        </div><!-- /.span5 -->
