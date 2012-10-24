@@ -24,17 +24,26 @@ get_header(); ?>
     query_posts( array( 'post_type' => 'post', 'paged'=>$paged, 'showposts'=>0) );
     if (have_posts()) : while ( have_posts() ) : the_post(); ?>
     <div <?php post_class(); ?>>
-      <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>
-      <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
-      <div class="row">
-        <div class="span2"><?php // Checking for a post thumbnail
+      <div class="row well">
+        
+        <div class="span2">
+
+        <?php // Checking for a post thumbnail
         if ( has_post_thumbnail() ) ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-          <?php the_post_thumbnail();?></a>
-        </div><!-- /.span2 -->
-        <div class="span6">
-         <?php the_excerpt();?>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+        <div class="img-rounded">
+          <?echo the_post_thumbnail();?>
+        </div>
+        </a>
+       </div><!--span2--> 
+        <div class="span5">
+<!--Title and meta-->
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3 align="center"><?php the_title();?></h3></a>
+          <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
+<!--Title and meta comes aside the featured image-->          
+                   <?php the_excerpt();?>
        </div><!-- /.span6 -->
+
      </div><!-- /.row -->
      <hr />
    </div><!-- /.post_class -->
