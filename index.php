@@ -31,25 +31,31 @@ get_header(); ?>
         <?php // Checking for a post thumbnail
         if ( has_post_thumbnail() ) ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-        <div class="img-rounded">
+        <div class="img-polaroid home-thumbnail">
           <?echo the_post_thumbnail();?>
         </div>
         </a>
        </div><!--span2--> 
         <div class="span5">
-<!--Title and meta-->
-          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3 align="center"><?php the_title();?></h3></a>
+      <!--Title and meta-->
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <h6>
+              <?php the_title();?>
+            </h6>
+          </a>
           <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
-<!--Title and meta comes aside the featured image-->          
+      <!--Title and meta comes aside the featured image-->          
                    <?php the_excerpt();?>
-       </div><!-- /.span6 -->
+       </div><!-- /.span5 -->
 
      </div><!-- /.row -->
-     <hr />
+     
    </div><!-- /.post_class -->
+
  <?php endwhile; endif; ?>
  <?php bootstrapwp_content_nav('nav-below');?>
 
 </div><!-- /.span8 -->
+<hr />
 <?php get_sidebar('blog'); ?>
 <?php get_footer(); ?>
