@@ -9,14 +9,10 @@
  */
 
 get_header(); ?>
-  <div class="row">
-    <div class="container">
-      <?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
-    </div><!--/.container -->
-  </div><!--/.row -->
 <div class="container">
   <div class="row content">
     <div class="span7 well">
+      <?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
       <?php query_posts('post_type=faq'); ?>    
         <?php $count=1 ?>
         <?php
