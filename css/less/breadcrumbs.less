@@ -6,9 +6,17 @@
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 @baseLineHeight;
+  left: 20px; //added to align content and breadcrumb box (which has the well)
   list-style: none;
   background-color: #f5f5f5;
   .border-radius(4px);
+  a{
+      color: @blue;
+      &:hover{
+        color:@black;
+      } 
+    }
+
   li {
     display: inline-block;
     .ie7-inline-block();
@@ -19,6 +27,6 @@
     color: #ccc;
   }
   .active {
-    color: @grayLight;
+    color: @black;
   }
 }

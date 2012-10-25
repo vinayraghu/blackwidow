@@ -8,7 +8,7 @@
  */
 ?>
 <div class="span4">
-		<div class="well sidebar-nav">
+		<div class="sidebar-nav">
             <?php
     if ( function_exists('dynamic_sidebar')) dynamic_sidebar("sidebar-posts");
 ?>
