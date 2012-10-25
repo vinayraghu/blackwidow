@@ -3697,6 +3697,7 @@ input[type="submit"].btn.btn-mini {
   color: #777777;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
+  text-transform: uppercase;
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
@@ -6629,9 +6630,6 @@ form.bs-docs-example {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .footer a {
-    background-color: #333333;
-  }
   .footer p {
     margin-bottom: 9px;
   }
@@ -7124,4 +7122,8 @@ h6 {
 }
 .continue-reading {
   font-weight: bold;
+}
+/*For the social media Icons on the nav bar to fade*/
+.some {
+  margin-top: 10px;
 }
