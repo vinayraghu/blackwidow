@@ -74,7 +74,6 @@
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/twitter.png" title="twitter" class="some" /></a>
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/skype.png" title="skype" class="some" /></a>
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/google.png" title="google" class="some" /></a>
-            <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/facebook.png" title="" class="some" /></a>
           </div>
         </div>
       </div>

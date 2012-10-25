@@ -26,8 +26,8 @@ get_header(); ?>
 		</div><!--/.container -->
 	</div><!--/.row -->
 	<div class="container">
-		<header class="jumbotron subhead" id="overview">
-			<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'bootstrapwp' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+		<header class="subhead" id="overview">
+			<h2 class="page-title author"><?php printf( __( 'Author Archives: %s', 'bootstrapwp' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h2>
 		</header>
 		<?php
 					/* Since we called the_post() above, we need to
@@ -37,7 +37,7 @@ get_header(); ?>
 					rewind_posts();
 					?>
 					<div class="row content">
-						<div class="span8">
+						<div class="span7 well">
 							<?php /* Start the Loop */ ?>
 							<?php while ( have_posts() ) : the_post(); ?>
 							<div <?php post_class(); ?>>
@@ -48,11 +48,10 @@ get_header(); ?>
 									        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
           										<?php echo bootstrapwp_autoset_featured_img(); ?></a>
 									        </div><!-- /.span2 -->
-									        <div class="span6">
+									        <div class="span5">
 									        	<?php the_excerpt();?>
 									        </div><!-- /.span6 -->
 									    </div><!-- /.row -->
-									    <hr />
 									</div><!-- /.post_class -->
 								<?php endwhile; ?>
 							<?php endif; ?>
