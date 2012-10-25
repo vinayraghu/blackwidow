@@ -71,8 +71,9 @@
           ) ); ?>
           <div class="pull-right">
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/facebook.png" title="Facebook" class="some" /></a>
+            <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/facebook.png" title="Pickawall" class="some" /></a>
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/twitter.png" title="twitter" class="some" /></a>
-            <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/skype.png" title="skype" class="some" /></a>
+            <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/linkedin.png" title="linkedin" class="some" /></a>
             <a href="http://www.google.com"><img src="<?php bloginfo( 'template_url' );?>/img/some/16/google.png" title="google" class="some" /></a>
           </div>
         </div>
