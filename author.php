@@ -20,15 +20,9 @@ get_header(); ?>
 	 */
 	the_post();
 	?>
-	<div class="row">
-		<div class="container">
-			<?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
-		</div><!--/.container -->
-	</div><!--/.row -->
+
 	<div class="container">
-		<header class="subhead" id="overview">
-			<h2 class="page-title author"><?php printf( __( 'Author Archives: %s', 'bootstrapwp' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h2>
-		</header>
+
 		<?php
 					/* Since we called the_post() above, we need to
 					 * rewind the loop back to the beginning that way
@@ -38,6 +32,10 @@ get_header(); ?>
 					?>
 					<div class="row content">
 						<div class="span7 well">
+							<header class="subhead" id="overview">
+								<h2 class="page-title author"><?php printf( __( 'Author: %s', 'bootstrapwp' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h2>
+							</header>														
+							<?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
 							<?php /* Start the Loop */ ?>
 							<?php while ( have_posts() ) : the_post(); ?>
 							<div <?php post_class(); ?>>

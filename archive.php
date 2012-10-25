@@ -14,14 +14,11 @@
 
 get_header();
 if (have_posts() ) ;?>
-<div class="row">
-	<div class="container">
-		<?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
-	</div><!--/.container -->
-</div><!--/.row -->
 <div class="container">
-	<header class="jumbotron subhead" id="overview">
-		<h1><?php
+<div class="row content">
+	<div class="span7 well">
+	<header class="subhead" id="overview">
+		<h2><?php
 		if ( is_day() ) {
 			printf( __( 'Daily Archives: %s', 'bootstrapwp' ), '<span>' . get_the_date() . '</span>' );
 		} elseif ( is_month() ) {
@@ -35,7 +32,7 @@ if (have_posts() ) ;?>
 			if ( $tag_description )
 				echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
 		} elseif ( is_category() ) {
-			printf( __( 'Category Archives: %s', 'bootstrapwp' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+			printf( __( 'Category: %s', 'bootstrapwp' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					// Show an optional category description
 			$category_description = category_description();
 			if ( $category_description )
@@ -43,12 +40,10 @@ if (have_posts() ) ;?>
 		} else {
 			_e( 'Blog Archives', 'bootstrapwp' );
 		}
-		?></h1>
-	</h1>
+		?></h2>
 </header>
+<?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
 
-<div class="row content">
-	<div class="span8">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div <?php post_class(); ?>>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>
@@ -58,11 +53,11 @@ if (have_posts() ) ;?>
 				        	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
           					<?php echo bootstrapwp_autoset_featured_img(); ?></a>
 				        </div><!-- /.span2 -->
-				        <div class="span6">
+				        <div class="span5">
 				        	<?php the_excerpt();?>
 				        </div><!-- /.span6 -->
 				    </div><!-- /.row -->
-				    <hr />
+
 				</div><!-- /.post_class -->
 			<?php endwhile; ?>
 			<?php bootstrapwp_content_nav('nav-below');?>
