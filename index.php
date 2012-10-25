@@ -56,6 +56,5 @@ get_header(); ?>
  <?php bootstrapwp_content_nav('nav-below');?>
 
 </div><!-- /.span8 -->
-<hr />
 <?php get_sidebar('blog'); ?>
 <?php get_footer(); ?>

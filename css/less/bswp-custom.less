@@ -7,10 +7,23 @@ h6{
 	font-size: 32px; 
 	line-height: 38px;
 }
+h5{
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 28.5px;
+}
 .continue-reading{
 	font-weight: bold;
 }
 /*For the social media Icons on the nav bar to fade*/
 .some{
 	margin-top: @baseLineHeight/2;
+	opacity: 1;
+	transition: opacity .5s ease;		
+	-moz-transition: opacity .5s ease;
+	-webkit-transition: opacity .5s ease;
+	-o-transition: opacity .5s ease;	
+	&:hover{
+		opacity: 0.5;
+	}
 }

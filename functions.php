@@ -69,6 +69,8 @@ add_action('wp_enqueue_scripts', 'bootstrapwp_css_loader');
 add_action('wp_enqueue_scripts', 'bootstrapwp_js_loader');
 
 
+
+
 /*
 | -------------------------------------------------------------------
 | Top Navigation Bar Customization
@@ -516,3 +518,15 @@ function bootstrapwp_autoset_featured_img() {
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a bootstrap.
  */
+add_action('init', 'faq_init');
+ 
+function faq_init() {
+  $args = array(
+    'labels' => array(
+      'name' => __('faqs'),
+      'singular_name' => __('faq'),
+    ),
+    'public' => true,
+  );
+  register_post_type( 'faq' , $args );
+}
