@@ -539,6 +539,7 @@ function services_init() {
         'singular_name'=>__('service'), 
         ),
         'public' => true,
+        'supports' => array('title','thumbnail','editor')
     );
 
 register_post_type('services',$args);

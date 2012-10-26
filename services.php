@@ -20,7 +20,13 @@ get_header(); ?>
                         // Blog post query
               if (have_posts()) : while ( have_posts() ) : the_post(); ?>
               <?php $title = strtolower(get_the_title()); ?>
+                
+              <?php if ($count == 1) : ?>
+                <li class="active">
+              <?php else : ?>
                 <li>
+              <?php endif; ?>
+
                   <a href="#<?php echo str_replace(" ", "-", $title); ?>" data-toggle="tab">
                       <?php echo the_title(); ?>
                   </a>
@@ -34,8 +40,25 @@ get_header(); ?>
                         // Blog post query
               if (have_posts()) : while ( have_posts() ) : the_post(); ?>
               <?php $title = strtolower(get_the_title()); ?>
-              <div class="tab-pane" id="<?php echo str_replace(" ", "-", $title); ?>">
-                  <?php echo the_content(); ?>
+              
+              <?php if ($count == 1) : ?>
+                <div class="tab-pane active" id="<?php echo str_replace(" ", "-", $title); ?>">
+                <?php else : ?>
+                <div class="tab-pane" id="<?php echo str_replace(" ", "-", $title); ?>">
+              <?php endif; ?>
+                  <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                      <div class="img-polaroid home-thumbnail alignleft">
+                          <?echo the_post_thumbnail();?>
+                      </div>
+                      <div class="tab-content">
+                        <?php echo the_content(); ?>
+                      </div> 
+                  </div>  
+
+                  <?php endif; ?>
+
+
+
               </div>
               <?php $count++ ?>
               <?php endwhile; endif; ?>              

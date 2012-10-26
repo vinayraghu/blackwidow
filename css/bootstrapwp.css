@@ -3187,7 +3187,6 @@ input[type="submit"].btn.btn-mini {
   font-weight: bold;
   line-height: 20px;
   color: #999999;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
 .nav li + .nav-header {
@@ -3202,7 +3201,6 @@ input[type="submit"].btn.btn-mini {
 .nav-list .nav-header {
   margin-left: -15px;
   margin-right: -15px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .nav-list > li > a {
   padding: 3px 15px;
@@ -3210,7 +3208,6 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a,
 .nav-list > .active > a:hover {
   color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #333333;
 }
 .nav-list [class^="icon-"] {
@@ -7143,4 +7140,8 @@ h5 {
 }
 .some:hover {
   opacity: 0.5;
+}
+/*Tabs for Services Page*/
+.tab-content {
+  margin-top: 20px;
 }
