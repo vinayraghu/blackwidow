@@ -530,3 +530,17 @@ function faq_init() {
   );
   register_post_type( 'faq' , $args );
 }
+add_action('init', 'services_init'); 
+
+function services_init() {
+  $args = array(
+    'labels' => array(
+        'name' => __('services'), 
+        'singular_name'=>__('service'), 
+        ),
+        'public' => true,
+    );
+
+register_post_type('services',$args);
+
+}

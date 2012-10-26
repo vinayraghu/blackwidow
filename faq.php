@@ -34,8 +34,9 @@ get_header(); ?>
           </div><!--accordion group-->          
         <?php $count++ ?>
         <?php endwhile; endif; ?>       
-      </div><!--Accourdion--> 
+      </div><!--Accordion--> 
     </div><!-- /.span7 -->
+    
   </div><!-- /.row --> 
 </div><!-- /.Container -->
 <?php get_sidebar('blog'); ?>
