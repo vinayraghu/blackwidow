@@ -15,15 +15,31 @@ get_header(); ?>
       <?php if (function_exists('bootstrapwp_breadcrumbs')) bootstrapwp_breadcrumbs(); ?>
       <?php query_posts('post_type=services'); ?>    
         <?php $count=1 ?>
-        <?php
-                    // Blog post query
-          if (have_posts()) : while ( have_posts() ) : the_post(); ?>
-          <?php $title = get_the_title(); ?>
-          <ul class="nav nav-tabs">
-            <li><a href="#<?php echo $title; ?>&amp;<?php echo str_replace(" ", "-", $title); ?>" data-toggle="tab"><?php echo $title; ?></a></li>
-        <?php $count++ ?>
-        <?php endwhile; endif; ?>
+          <ul class="nav nav-tabs">        
+            <?php
+                        // Blog post query
+              if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+              <?php $title = strtolower(get_the_title()); ?>
+                <li>
+                  <a href="#<?php echo str_replace(" ", "-", $title); ?>" data-toggle="tab">
+                      <?php echo the_title(); ?>
+                  </a>
+                </li>                
+            <?php $count++ ?>
+            <?php endwhile; endif; ?>
         </ul>       
+        <div class="tab-content">
+            <?php $count=1 ?>
+            <?php
+                        // Blog post query
+              if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+              <?php $title = strtolower(get_the_title()); ?>
+              <div class="tab-pane" id="<?php echo str_replace(" ", "-", $title); ?>">
+                  <?php echo the_content(); ?>
+              </div>
+              <?php $count++ ?>
+              <?php endwhile; endif; ?>              
+        </div>        
     </div><!-- /.span7 -->
     
   </div><!-- /.row --> 
